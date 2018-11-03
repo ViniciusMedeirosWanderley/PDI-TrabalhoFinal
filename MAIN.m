@@ -4,9 +4,9 @@
 close all; clear all;
 for i=1:4
   if (i == 1)
-    files = dir('b.jpg');
+   files = dir('.\door pictures\*.b*');
   elseif (i == 2)
-    files = dir('j.jpg');
+   files = dir('.\door pictures\*.g*');
   elseif (i == 3)
     files = dir('.\door pictures\*.j*');
   else
