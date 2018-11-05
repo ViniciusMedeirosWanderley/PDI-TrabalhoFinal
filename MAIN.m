@@ -1,22 +1,21 @@
 % ee368 Spring 2010
 % run certain pictures or all pictures
 
-close all; clear all;
 for i=1:4
   if (i == 1)
-   files = dir('.\door pictures\*.b*');
+   F = dir('.\door pictures\*.b*');
   elseif (i == 2)
-   files = dir('.\door pictures\*.g*');
+   F = dir('.\door pictures\*.g*');
   elseif (i == 3)
-    files = dir('.\door pictures\*.j*');
+    F = dir('.\door pictures\*.j*');
   else
-    files = dir('.\door pictures\I*.j*');
+    F = dir('.\door pictures\I*.j*');
   end
-
+  
   %For each JPEG file in DoorImages Directory
-  for fi = 1:length(files)
+  for fi = 1:length(F)
 
-    [I, Q_mask, I_marked] = roi_preprocess(strcat('.\door pictures\',files(fi).name));
+    [I, Q_mask, I_marked] = roi_preprocess(strcat('.\door pictures\',F(fi).name));
     figure(50);
     imshow(I);
     figure(51);
@@ -24,11 +23,8 @@ for i=1:4
     figure(52);
     imshow(I_marked);
 
-%    saveas(f,strcat('output\output_',files(fi).name));
-    myoutfilename=strcat('Output/output_',files(fi).name)
-    print('-djpeg','-f52',myoutfilename)
+    imwrite(I_marked,strcat('C:\Users\Italo\Documents\GitHub\PDI-TrabalhoFinal\Output\result_',F(fi).name));
+    print(F(fi).name);
   end
 
-
 end
-
