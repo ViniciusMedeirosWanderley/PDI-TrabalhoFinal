@@ -56,7 +56,9 @@ function [door_cnt,picmatrix,doorsmatrix,figcount] = door_detection_roi(holdmatr
   figcount = figcount + 1;
   imshow(cast(picmatrix,'uint8'))
   mystring=sprintf('colored door for %s',inputpixname);
-  title(mystring,'interpreter', 'none')
+  s = regexprep(mystring, '\', ' ');
+  title(s)
+  %title(mystring,'interpreter', 'none')
  
   door_cnt = size(finaldoorlinematrix,1);
 

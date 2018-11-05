@@ -49,7 +49,7 @@ function [IDX,sep] = otsu(I,n)
 %   Visit my <a
 %   href="matlab:web('http://www.biomecardio.com/matlab/otsu.html')">website</a> for more details about OTSU
 
-error(nargchk(1,2,nargin))
+narginchk(1,2)
 
 % Check if is the input is an RGB image
 isRGB = isrgb(I);

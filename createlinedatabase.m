@@ -32,7 +32,9 @@ function [linematrix,blobmatrix,blobcount,hingematrix,figcount] = ...
   figcount = figcount + 1;
   imshow(cast(picmatrix3,'uint8'))
   mystring=sprintf('tony out for %s',inputpixname);
-  title(mystring)
+   s = regexprep(mystring, '\', ' ');
+  title(s,'interpreter', 'none')
+  %title(mystring)
 
 %  [picmatrix4,sobthresh,sobv,sobh]=edge(picmatrix3,'sobel','nothinning');
 
@@ -45,7 +47,9 @@ function [linematrix,blobmatrix,blobcount,hingematrix,figcount] = ...
   figcount = figcount + 1;
   imshow(cast(picmatrix4,'uint8'))
   mystring=sprintf('sobel v for %s',inputpixname);
-  title(mystring,'interpreter', 'none')
+  s = regexprep(mystring, '\', ' ');
+  title(s,'interpreter', 'none')
+  %title(mystring,'interpreter', 'none')
 
   [picmatrix5,countvector] = regioncount(picmatrix4);
 %  regionstodelete = find((0 < countvector) & (countvector < 200))
@@ -95,7 +99,9 @@ function [linematrix,blobmatrix,blobcount,hingematrix,figcount] = ...
   figcount = figcount + 1;
   imshow(cast(picmatrix4,'uint8'))
   mystring=sprintf('sobel h for %s',inputpixname);
-  title(mystring, 'interpreter', 'none')
+  s = regexprep(mystring, '\', ' ');
+  title(s, 'interpreter', 'none')
+  %title(mystring, 'interpreter', 'none')
   
   [picmatrix5,countvector] = regioncount(picmatrix4);
   regionstotest = find(countvector > 50);

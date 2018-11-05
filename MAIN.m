@@ -23,7 +23,7 @@ for i=1:4
     figure(52);
     imshow(I_marked);
 
-    imwrite(I_marked,strcat('C:\Users\Italo\Documents\GitHub\PDI-TrabalhoFinal\Output\result_',F(fi).name));
+    imwrite(I_marked,strcat('C:\Users\vinic\Documents\GitHub\PDI-TrabalhoFinal\Output\result_',F(fi).name));
     print(F(fi).name);
   end
 
