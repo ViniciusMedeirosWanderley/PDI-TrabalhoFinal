@@ -1,0 +1,5 @@
+Teste sem alterações - 79%
+Teste Mediana 5 x 5 - 76.5%
+Teste Kuwahara - 78,5%
+Teste Gaussiano - 78%
+Teste Gaussiano, Mediana e Kuwahara - 78,5%
