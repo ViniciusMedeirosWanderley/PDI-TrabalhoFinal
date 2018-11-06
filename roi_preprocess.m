@@ -48,6 +48,9 @@ else
   I_g = Inimage;
 end
 
+%PASSA MEDIANA ANTES DE PROCURAR OS PONTOS
+ I_g = medfilt2(I_g, [5 5]);
+
 %Cross for dilation
 %Needed to improve corners in image
 crnr = [0 1 0;
