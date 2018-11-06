@@ -53,7 +53,6 @@ end
 %I_g = imgaussfilt(I_g);
 I_g = Kuwahara(I_g,5);
 
-
 %Cross for dilation
 %Needed to improve corners in image
 crnr = [0 1 0;
@@ -91,9 +90,9 @@ figure(42),imshow(Inimage);
 [r_,c_] = find(CE2 == 1);
 pts = [r_,c_];
 
-%Get quadrilaterals (not rectangles) meeting the criteria
-%7 degrees,Min Height/Width 1.5, Max Height/Width 3.2
-[Mask,Quads] = GetQuadMask(Inimage,pts,10,0,0.5,5);
+%[Mask,Quads] = GetQuadMask(Inimage,pts,10,0,0.5,4);
+% MODIFICANDO A PROPORÇÃO MAX/MIN ENTRE LARGURA/ALTURA
+[Mask,Quads] = GetQuadMask(Inimage,pts,10,0,1,4); %(I,pts,ang_lim,area_lim,ratl,ratu)
 
 Q_mask = zeros(size(I_ef));
 
