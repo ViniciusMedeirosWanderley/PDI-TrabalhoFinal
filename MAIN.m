@@ -24,7 +24,7 @@ for i=1:4
     imshow(I_marked);
     
     %modificar o usuário aqui de acordo com onde foi mexer!!
-    imwrite(I_marked,strcat('C:\Users\Italo\Documents\GitHub\PDI-TrabalhoFinal\Output\result_',F(fi).name)); 
+    imwrite(I_marked,strcat('C:\Users\vinic\Documents\GitHub\PDI-TrabalhoFinal\Output\result_',F(fi).name)); 
     print(F(fi).name);
   end
 
