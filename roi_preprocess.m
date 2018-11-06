@@ -49,8 +49,8 @@ else
 end
 
 %PASSA MEDIANA ANTES DE PROCURAR OS PONTOS
-%I_g = medfilt2(I_g,[3 3]); 
-%I_g = imgaussfilt(I_g);
+I_g = medfilt2(I_g,[5 5]); 
+I_g = imgaussfilt(I_g,2);
 I_g = Kuwahara(I_g,5);
 
 %Cross for dilation
