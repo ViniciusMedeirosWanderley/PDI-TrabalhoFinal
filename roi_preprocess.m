@@ -49,7 +49,10 @@ else
 end
 
 %PASSA MEDIANA ANTES DE PROCURAR OS PONTOS
- I_g = medfilt2(I_g, [5 5]);
+%I_g = medfilt2(I_g,[3 3]); 
+%I_g = imgaussfilt(I_g);
+I_g = Kuwahara(I_g,5);
+
 
 %Cross for dilation
 %Needed to improve corners in image
@@ -58,7 +61,7 @@ crnr = [0 1 0;
         0 1 0];
 
 %Do a high threshold canny detection  
-I_e = edge(I_g,'canny',0.05,1);
+I_e = edge(I_g,'canny',0.1,1);
 %I_ef = imerode(imdilate(I_e,ones(2,2)),[0 1;1 0]);
 I_ef = imdilate(I_e,crnr);
 
@@ -90,7 +93,7 @@ pts = [r_,c_];
 
 %Get quadrilaterals (not rectangles) meeting the criteria
 %7 degrees,Min Height/Width 1.5, Max Height/Width 3.2
-[Mask,Quads] = GetQuadMask(Inimage,pts,10,0,1,4);
+[Mask,Quads] = GetQuadMask(Inimage,pts,10,0,0.5,5);
 
 Q_mask = zeros(size(I_ef));
 
