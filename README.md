@@ -62,7 +62,7 @@ Filtro morfológico de erosão: provoca efeitos de erosão das partes claras da 
 
 Técnica que determina um limiar ótimo considerando uma imagem I, que apresenta melhor funcionamento em imagens cujos histogramas são bimodais. A ideia é aproximar o histograma de uma imagem por duas funções Gaussianas e escolher o limiar de forma a minimizar a variância intra-classes. Cada classe possui suas próprias características, ou seja, sua média e desvio-padrão
 
-## Materiais e Métodos ###
+## 3. Materiais e Métodos ###
 
 ### 3.1. Materiais ###
 
@@ -141,10 +141,10 @@ O código foi testado contra vários tipos de portas, em cenas diferentes e em d
 Fizemos mais testes em diversas situações para entender na prática como funcionava o programa:
 
 ![alt text](/imgs/porta3.jpg)
-![alt text](/imgs/porta3imgmFinal.jpg)
-
+![alt text](/imgs/porta3imgFinal.jpg)
+porta3imgmFinal.jpg
 ![alt text](/imgs/porta2.jpg)
-![alt text](/imgs/porta2imgmFinal.jpg)
+![alt text](/imgs/porta2imgFinal.jpg)
 
 A taxa de detecção das portas pelo algoritmo é de 80% para um conjunto de entrada com 196 portas distribuídas entre 30 imagens randômicas. O tempo médio de decisão é de 7 segundos para dimensões com 750 x 550 pixels.
 
