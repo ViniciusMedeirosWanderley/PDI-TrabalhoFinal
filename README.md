@@ -95,7 +95,7 @@ limite de tolerância comparável com os ângulos de uma porta vista com uma câ
 Os quadriláteros selecionados com base na forma são avaliados para a conexão geral na imagem da aresta. Cada região quadrilateral remanescente é convertida em uma região retangular, e cada região é cortada da imagem original, preenchida e enviada ao
 algoritmo de extração de linha e recurso. Se a região selecionada for pequena, a imagem será ampliada antes de ser enviada.
 
-![alt text](/imgs/uniaoQuad .jpg)
+![alt text](/imgs/uniaoQuad.jpg)
 
 O pré-processamento, portanto, deixa o algoritmo de detecção de portas com maior robustez e pode acelerar o processo de detecção.
 
